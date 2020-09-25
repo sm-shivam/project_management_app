@@ -1,47 +1,8 @@
 from django.shortcuts import render,redirect
 from .models import User,Company
 from django.views import View
-# from .serializers import UserSerializer,CompanySerializer
-# from rest_framework.views import APIView
-# from rest_framework import status
-# from rest_framework.response import Response
 
-# # Create your views here.
-# class Register(APIView):
-
-#     def get(self,request):
-#         pass
-
-#     def post(self,request):
-#         data = request.data
-#         if not (data.get('email') and data.get('password') and data.get('firstname') and data.get('lastname') and data.get('mobile')):
-#             return Response({'message':'Please enter all required fields !'})
-
-#         serializer = UserSerializer(data=data)
-#         if serializer.is_valid(raise_exception=True):
-#             serializer.save()
-#             return Response(serializer.data,status=status.HTTP_200_OK)
-#         else:
-#             return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
-
-class Register(View):
-    def get(self,request):
-        pass
-
-    def post(self,request):
-        data = request.data
-        if not (data.get('email') and data.get('password') and data.get('firstname') and data.get('lastname') and data.get('mobile')):
-            return render(request,'html',{'message':'Please enter all required fields !'})
-        
-        user = User(email=data.get('email'),firstname=data.get('firstname'),lastname=data.get('lastname'),password=data.get('password'),mobile=data.get('mobile'))
-        user.save()
-        return redirect(request,'some_html',{'user_data':user})
-
-class login(View):
-    def get(self,request):
-        pass
-    def post(self,request):
-        pass
+# Create your views here.
 
 
 # def register(request):
