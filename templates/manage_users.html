@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Manage Users</title>
+    <!--[if lt IE 9]><script src="js/html5shiv.min.js"></script><![endif]-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/fa.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/base.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/manage_users.css' %}" rel="stylesheet" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="{% static 'img/apple-touch-icon-144-precomposed.png' %}"
+    />
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <a href="javascript:void(0)" class="menu-close d-block d-lg-none"
+        ><span class="sr-only">Close</span></a
+      >
+      <div class="logo d-block-desk">
+        <a href="#"><img src="{% static 'img/logo_horizontal_2x.png' %}" alt="" /></a>
+      </div>
+      <div class="site-menu">
+        <ul class="side-menu">
+          <li>
+            <a href="#"
+              ><img src="{% static 'img/dashboard_2x.png' %}" alt="" />Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="#"><img src="{% static 'img/tasks_2x.png' %}" alt="" />Tasks</a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="{% static 'img/button_history_2x.png' %}" alt="" />Button
+              History</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="{% static 'img/achievements_2x.png' %}" alt="" />Achievements</a
+            >
+          </li>
+          <li>
+            <a href="#"><img src="{% static 'img/settings_2x.png' %}" alt="" />Settings</a>
+            <ul>
+              <li><a href="#">Manage Subscription</a></li>
+              <li><a href="#">Manage Users</a></li>
+              <li><a href="#">Feedback</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="{% static 'img/online_help_2x.png' %}" alt="" />Online Help</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="{% static 'img/contact_us_2x.png' %}" alt="" />Contact Us
+            </a>
+          </li>
+        </ul>
+      </div>
+      <footer class="footer">
+        <div class="logo d-block-mob">
+          <a href="#"><img src="{% static 'img/logo_vertical_2x.png' %}" alt="" /></a>
+        </div>
+        <div class="copy">© My Marketing Button Ltd.</div>
+      </footer>
+    </div>
+
+    <header class="header clearfix">
+      <a href="#" class="media"
+        ><span class="media-body">Hello, <strong>Mags</strong></span
+        ><span class="initial">MB</span></a
+      >
+      <a href="javascript:void(0)" class="menu-icon d-block d-lg-none"
+        ><span class="sr-only">Menu</span></a
+      >
+    </header>
+
+    <div class="wrapper manageuser-page">
+      <div class="wrapper-content">
+        <div class="manageuser-wrapper">
+          <h3>Manage Users</h3>
+
+          <div class="row">
+            <div class="col-lg-7 col-xl-8">
+              <div class="user-list">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><strong>Daniel Askwith</strong><small>User</small></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><strong>Margaret Bradshaw</strong><small>Admin</small></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><strong>Daniel Askwith</strong><small>Admin</small></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><strong>Mark Lane</strong><small>Admin</small></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><strong>Helen Stewart</strong><small>Admin</small></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-5 col-xl-4">
+              <div class="invite-form">
+                <h5>Invite Team Members</h5>
+                <form action="#" method="post">
+                  <div class="form-group">
+                    <label>Email Address</label
+                    ><input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter…"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>First Name</label
+                    ><input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter…"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Last Name</label
+                    ><input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter…"
+                    />
+                  </div>
+                  <div class="submit-btn">
+                    <button type="submit" class="button button-block">
+                      <span>Send Invite</span><span>Submit</span>
+                    </button>
+                  </div>
+                </form>
+                <div class="pending-invite">
+                  <h5>Pending invites</h5>
+                  <div class="invite-list">
+                    <div class="media">
+                      <div class="media-body">
+                        <strong>Boris Johnson</strong>
+                        <small><i class="far fa-clock"></i> 6 days ago</small>
+                      </div>
+                      <ul>
+                        <li>
+                          <a href="#"><i class="fas fa-redo"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="far fa-trash-alt"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/jquery-min.js"></script>
+    <script src="{% static 'js/popper.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js"></script>
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js"></script>
+    <script src="{% static 'js/ie-emulation-modes-warning.js"></script>
+    <script src="{% static 'js/custom.js"></script>
+    <script src="{% static 'js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript">
+      jQuery(".coleql_height").matchHeight();
+    </script>
+  </body>
+</html>

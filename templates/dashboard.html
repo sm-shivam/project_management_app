@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/fa.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/base.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/dashboard.css' %}" rel="stylesheet" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="{% static 'img/apple-touch-icon-144-precomposed.png' %}"
+    />
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <a href="javascript:void(0)" class="menu-close d-block d-lg-none"
+        ><span class="sr-only">Close</span></a
+      >
+      <div class="logo d-block-desk">
+        <a href="#"><img src="{% static 'img/logo_horizontal_2x.png' %}" alt="" /></a>
+      </div>
+      <div class="site-menu">
+        <ul class="side-menu">
+          <li>
+            <a href="#"
+              ><img src="{% static 'img/dashboard_2x.png' %}" alt="" />Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="#"><img src="{% static 'img/tasks_2x.png' %}" alt="" />Tasks</a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="{% static 'img/button_history_2x.png' %}" alt="" />Button
+              History</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="{% static 'img/achievements_2x.png' %}" alt="" />Achievements</a
+            >
+          </li>
+          <li>
+            <a href="#"><img src="{% static 'img/settings_2x.png' %}" alt="" />Settings</a>
+            <ul>
+              <li><a href="#">Manage Subscription</a></li>
+              <li><a href="#">Manage Users</a></li>
+              <li><a href="#">Feedback</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="{% static 'img/online_help_2x.png' %}" alt="" />Online Help</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="{% static 'img/contact_us_2x.png' %}" alt="" />Contact Us
+            </a>
+          </li>
+        </ul>
+      </div>
+      <footer class="footer">
+        <div class="logo d-block-mob">
+          <a href="#"><img src="{% static 'img/logo_vertical_2x.png' %}" alt="" /></a>
+        </div>
+        <div class="copy">© My Marketing Button Ltd.</div>
+      </footer>
+    </div>
+
+    <header class="header clearfix">
+      <a href="#" class="media"
+        ><span class="media-body">Hello, <strong>Mags</strong></span
+        ><span class="initial">MB</span></a
+      >
+      <a href="javascript:void(0)" class="menu-icon d-block d-lg-none"
+        ><span class="sr-only">Menu</span></a
+      >
+    </header>
+    <div class="wrapper dashboard-wrapper">
+      <div class="dashboard-wrapper-inner">
+        <div class="dashboard-top">
+          <h3>Dashboard</h3>
+          <h5>
+            Check your progress with tasks and where you need to focus your
+            efforts
+          </h5>
+        </div>
+        <div class="dashboard-content-area">
+          <div class="dashboard-content">
+            <!-- dashboard action area html started here -->
+            <div class="dashboard-content-action-area">
+              <figure>
+                <img src="{% static 'img/button_background_2x.png' %}" />
+              </figure>
+              <a class="button-history" href=""
+                ><i class="fas fa-history"></i>See button history</a
+              >
+              <div class="dashboard-button-list">
+                <ul>
+                  <li>Clients</li>
+                  <li>Prospects</li>
+                  <li>Products & Services</li>
+                  <li>Communications</li>
+                </ul>
+              </div>
+            </div>
+            <!-- dashboard accordian html started here -->
+            <div class="dashboard-accordian-conetent">
+              <div id="accordion" class="myaccordion">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button
+                        class="d-flex align-items-center justify-content-between btn btn-link collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="false"
+                        aria-controls="collapseOne"
+                      >
+                        <div class="accordian-figure">
+                          <figure>
+                            <img src="{% static 'img/clients_2x.png' %}" />
+                          </figure>
+                          <span>Clients</span>
+                        </div>
+                        <span class="fa-stack fa-sm">
+                          <i class="fas fa-circle fa-stack-2x"></i>
+                          <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    id="collapseOne"
+                    class="collapse"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body">
+                      <h4>Overall Progress</h4>
+                      <div class="progress" style="height: 15px">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 80%"
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                      <h5>Thread Progress</h5>
+                      <label class="progress-label">Content</label>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 50%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                      <label class="progress-label">Clarity</label>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 75%"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                      <label class="progress-label">Content</label>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 15%"
+                          aria-valuenow="100"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button
+                        class="d-flex align-items-center justify-content-between btn btn-link collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <div class="accordian-figure">
+                          <figure>
+                            <img src="{% static 'img/prospects_2x.png' %}" />
+                          </figure>
+                          <span>Prospects</span>
+                        </div>
+                        <span class="fa-stack fa-2x">
+                          <i class="fas fa-circle fa-stack-2x"></i>
+                          <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    class="collapse"
+                    aria-labelledby="headingTwo"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body">
+                      <h4>Overall Progress</h4>
+                      <div class="progress" style="height: 15px">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 80%"
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                      <h5>Thread Progress</h5>
+                      <label class="progress-label">Content</label>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 50%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                      <label class="progress-label">Clarity</label>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 75%"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                      <label class="progress-label">Content</label>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 15%"
+                          aria-valuenow="100"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                      <button
+                        class="d-flex align-items-center justify-content-between btn btn-link collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <div class="accordian-figure">
+                          <figure>
+                            <img src="{% static 'img/products_services_2x.png' %}" />
+                          </figure>
+                          <span>Products & Services</span>
+                        </div>
+                        <span class="fa-stack fa-2x">
+                          <i class="fas fa-circle fa-stack-2x"></i>
+                          <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    id="collapseThree"
+                    class="collapse"
+                    aria-labelledby="headingThree"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body">
+                      <h4>Overall Progress</h4>
+                      <div class="progress" style="height: 15px">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 80%"
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                      <h5>Thread Progress</h5>
+                      <label class="progress-label">Content</label>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 50%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                      <label class="progress-label">Clarity</label>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 75%"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                      <label class="progress-label">Content</label>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 15%"
+                          aria-valuenow="100"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingFour">
+                    <h2 class="mb-0">
+                      <button
+                        class="d-flex align-items-center justify-content-between btn btn-link collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <div class="accordian-figure">
+                          <figure>
+                            <img src="{% static 'img/communications_2x.png' %}" />
+                          </figure>
+                          <span>Communications</span>
+                        </div>
+                        <span class="fa-stack fa-2x">
+                          <i class="fas fa-circle fa-stack-2x"></i>
+                          <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    id="collapseFour"
+                    class="collapse"
+                    aria-labelledby="headingFour"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body">
+                      <h4>Overall Progress</h4>
+                      <div class="progress" style="height: 15px">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 80%"
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                      <h5>Thread Progress</h5>
+                      <label class="progress-label">Content</label>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 50%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                      <label class="progress-label">Clarity</label>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 75%"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                      <label class="progress-label">Content</label>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 15%"
+                          aria-valuenow="100"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- dashboard my task html started her -->
+          <div class="dashboard-mytask">
+            <h2>My Tasks</h2>
+            <div class="dashboard-mytask-list">
+              <ul>
+                <li>
+                  <h3>
+                    Get a testimonial from a client.<span>CONTENT REVIEW</span>
+                  </h3>
+                  <p>Q2 2020</p>
+                </li>
+                <li>
+                  <h3>
+                    Develop sales potential.<span
+                      >CONVERSION PROCESS & SALES</span
+                    >
+                  </h3>
+                  <button class="btn completed">complete</button>
+                </li>
+                <li>
+                  <h3>
+                    An example of a user-created task.<span
+                      >CONTENT REVIEW</span
+                    >
+                  </h3>
+                  <p><i class="fas fa-user-circle"></i>Q2 2020</p>
+                </li>
+                <li>
+                  <h3>
+                    Develop sales potential.<span
+                      >CONVERSION PROCESS & SALES</span
+                    >
+                  </h3>
+                  <button class="btn completed">complete</button>
+                </li>
+                <li>
+                  <h3>
+                    Get a testimonial from a client.<span>CONTENT REVIEW</span>
+                  </h3>
+                  <p>Q2 2020</p>
+                </li>
+                <li>
+                  <h3>
+                    Develop sales potential.<span
+                      >CONVERSION PROCESS & SALES</span
+                    >
+                  </h3>
+                  <button class="btn completed">complete</button>
+                </li>
+                <li>
+                  <h3>
+                    An example of a user-created task.<span
+                      >CONTENT REVIEW</span
+                    >
+                  </h3>
+                  <p><i class="fas fa-user-circle"></i>Q2 2020</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- dashboard my task content in  mobile-->
+          <div class="threads-mytask">
+            <h2>Progress</h2>
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link active"
+                  id="home-tab"
+                  data-toggle="tab"
+                  href="#home"
+                  role="tab"
+                  aria-controls="home"
+                  aria-selected="true"
+                  >Threads</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="profile-tab"
+                  data-toggle="tab"
+                  href="#profile"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                  >My Tasks</a
+                >
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="home"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+              >
+                <div class="card-body">
+                  <h5>Client Sales Potential</h5>
+                  <label class="progress-label">CLIENTS</label>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 20%"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5>Client Sales</h5>
+                  <label class="progress-label">CLIENTS</label>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 50%"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5>Client Care</h5>
+                  <label class="progress-label">CLIENTS</label>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 15%"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5>Market Research</h5>
+                  <label class="progress-label">PROSPECTS</label>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 5%"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5>Market Potential</h5>
+                  <label class="progress-label">PROSPECTS</label>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 10%"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5>Clarity</h5>
+                  <label class="progress-label">COMMUNICATION</label>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 45%"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5>Outbound</h5>
+                  <label class="progress-label">COMMUNICATION</label>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 95%"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5>Client Sales Potential</h5>
+                  <label class="progress-label">CLIENTS</label>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 4%"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5>Client Sales Potential</h5>
+                  <label class="progress-label">COMMUNICATION</label>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 36%"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="profile"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+              >
+                <div class="dashboard-mytask-list">
+                  <ul>
+                    <li>
+                      <h3>
+                        Get a testimonial from a client.<span
+                          >CONTENT REVIEW</span
+                        >
+                      </h3>
+                      <p>Q2 2020</p>
+                    </li>
+                    <li>
+                      <h3>
+                        Develop sales potential.<span
+                          >CONVERSION PROCESS & SALES</span
+                        >
+                      </h3>
+                      <button class="btn completed">completed</button>
+                    </li>
+                    <li>
+                      <h3>
+                        An example of a user-created task.<span
+                          >CONTENT REVIEW</span
+                        >
+                      </h3>
+                      <p>Q2 2020</p>
+                    </li>
+                    <li>
+                      <h3>
+                        Develop sales potential.<span
+                          >CONVERSION PROCESS & SALES</span
+                        >
+                      </h3>
+                      <button class="btn completed">completed</button>
+                    </li>
+                    <li>
+                      <h3>
+                        Get a testimonial from a client.<span
+                          >CONTENT REVIEW</span
+                        >
+                      </h3>
+                      <p>Q2 2020</p>
+                    </li>
+                    <li>
+                      <h3>
+                        Develop sales potential.<span
+                          >CONVERSION PROCESS & SALES</span
+                        >
+                      </h3>
+                      <button class="btn completed">completed</button>
+                    </li>
+                    <li>
+                      <h3>
+                        An example of a user-created task.<span
+                          >CONTENT REVIEW</span
+                        >
+                      </h3>
+                      <p>Q2 2020</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ruby iBot -->
+    <div data-toggle="modal" data-target="#rubypop" class="ruby">
+      <img src="{% static 'img/ruby_ibot_2x.png' %}" alt="" />
+    </div>
+    <div
+      class="modal fade"
+      id="rubypop"
+      tabindex="-1"
+      aria-labelledby="rubypopLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered support-popup">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="rubypopLabel">
+              Welcome to your button!
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">Close</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              To get the most out of your button, just click on me if you need
+              any help.
+            </p>
+            <p>
+              Alternatively you can <a href="">contact us</a> or check out the
+              <a href="">FAQs</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/jquery-min.js"></script>
+    <script src="{% static 'js/popper.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js"></script>
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js"></script>
+    <script src="{% static 'js/ie-emulation-modes-warning.js"></script>
+    <script src="{% static 'js/custom.js"></script>
+    <script src="{% static 'js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript">
+      jQuery(".coleql_height").matchHeight();
+
+      $("#accordion").on("hide.bs.collapse show.bs.collapse", (e) => {
+        $(e.target).prev().find("i:last-child").toggleClass("fa-minus fa-plus");
+      });
+    </script>
+  </body>
+</html>
